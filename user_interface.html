@@ -307,6 +307,9 @@
 
 <script language="javascript">
 	<!--
+	//
+	var apagarIrrTem = new Boolean(true);
+
 	//Boton Irrigacion-------------------------------------------------------------
 	
 
@@ -479,11 +482,12 @@
 		function countdown() {	
 	  		if (timeLeft == 0) {
 			    elem.innerHTML = 'Finalizado';
-			    var x = new Boolean(true);
-			    while(x){
+			    while(apagarIrrTem){
 			    	document.getElementById('historialArea').innerHTML += 'Apagando irrigaci\u00F3n...'+'\n';
 					enviaDatos('ONOFFIrrig','OFF','IRRIGACION');
-					break;
+					enviaDatos('TEMP',document.getElementById('temp_input').value,'TEMPERATURA');
+					apagarIrrTem = false ;
+					//break;
 			    }
 				
 	  		} else {
@@ -501,10 +505,6 @@
 			enviaDatos('ONOFFIrrig','ON','IRRIGACION');
 			enviaDatos('TEMP',document.getElementById('temp_input').value,'TEMPERATURA');
 			
-	}
-
-	function apagarIrrTem(){
-
 	}
 
 	
@@ -611,6 +611,7 @@
 				submit('VENTILADOR','25');
 				enviaHistorial('25','VENTILADOR');
 			} else {
+				enviaHistorial(valor,funcion);
 				submit(funcion, valor);
 			}
 		}
