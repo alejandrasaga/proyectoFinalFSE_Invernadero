@@ -474,12 +474,18 @@
 		var elem = document.getElementById("reloj");
 		var timerId = setInterval(countdown, 1000);
 		var seg = 59;
-		var reloj = 0;
+		
 
 		function countdown() {	
 	  		if (timeLeft == 0) {
 			    elem.innerHTML = 'Finalizado';
-			    apagaCiclo(reloj);
+			    var x = new Boolean(true);
+			    while(x){
+			    	document.getElementById('historialArea').innerHTML += 'Apagando irrigaci\u00F3n...'+'\n';
+					enviaDatos('ONOFFIrrig','OFF','IRRIGACION');
+					break;
+			    }
+				
 	  		} else {
 	  			reloj = 1;
     			elem.innerHTML = timeLeft2 + ":" + seg + ' --- Tiempo restante';
@@ -492,18 +498,15 @@
 			}
 		}
 			document.getElementById('historialArea').innerHTML += 'Irrigaci\u00F3n encendida...'+'\n';
-			enviaDatos('ONOFFIrrig','ON','IRRIGACION')
-			enviaDatos('TEMP',document.getElementById('temp_input').value,'TEMPERATURA')
+			enviaDatos('ONOFFIrrig','ON','IRRIGACION');
+			enviaDatos('TEMP',document.getElementById('temp_input').value,'TEMPERATURA');
+			
 	}
 
-	function apagaCiclo(reloj){
-		var apagar = reloj;
-		if(apagar == 0){
-			document.getElementById('historialArea').innerHTML += 'Apagando irrigaci\u00F3n...'+'\n';
-			enviaDatos('ONOFFIrrig','OFF','IRRIGACION');
-			apagar = 1;
-		} 
+	function apagarIrrTem(){
+
 	}
+
 	
 	//Funcion para el historial---------------------------------------------------
 	function enviaHistorial(valor, funcion){
