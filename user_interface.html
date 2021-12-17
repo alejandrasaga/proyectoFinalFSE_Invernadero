@@ -8,196 +8,192 @@
 		<title> Invernadero </title>
 		
 		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-		<script src=></script>
-		<style type="text/css">
-		*{
-		margin: 0;
-		box-sizing: border-box;
-		}
-		body{
-		font-family: sans-serif;
-		padding: 90px 20px 0;
-		}
-/*Cabecera principal*/
-		.header{ 
-		background-color: #008000; /*Fondo color verde*/
-		height: 80px;
-		position: fixed; /*Posicion fija*/
-		width: 100%;
-		top: 0;
-		left: 0; 
-		}
-/*Contenido de la barra*/
-	.container{ 
-	display: flex;
-	justify-content: space-between; /*Espacio entre "Invernadero" y "Control"*/
-	max-width: 992px;
-	margin: 0 auto; /*Se centran palabras*/
-	}
+		<style>
+			*{
+				margin: 0;
+				box-sizing: border-box;
+			}
+			body{
+				font-family: sans-serif;
+				padding: 90px 20px 0;
+			}
+			/*Cabecera principal*/
+			.header{ 
+				background-color: #008000; /*Fondo color verde*/
+				height: 80px;
+				position: fixed; /*Posicion fija*/
+				width: 100%;
+				top: 0;
+				left: 0; 
+			}
+			/*Contenido de la barra*/
+			.container{ 
+				display: flex;
+				justify-content: space-between; /*Espacio entre "Invernadero" y "Control"*/
+				max-width: 992px;
+				margin: 0 auto; /*Se centran palabras*/
+			}
 
-/*Palabra Invernadero*/
-	.logo{
-	font-size: 30px;
-	font-weight: bold;
-	padding: 0 20px;
-	line-height: 80px;
-	color: white;
-	text-decoration: none;
-	}
+			/*Palabra Invernadero*/
+			.logo{
+				font-size: 30px;
+				font-weight: bold;
+				padding: 0 20px;
+				line-height: 80px;
+				color: white;
+				text-decoration: none;
+			}
 
-.nav{
-	display: flex;
-	margin-left: 40px;
-	list-style: none;
-	}
+			.nav{
+				display: flex;
+				margin-left: 40px;
+				list-style: none;
+			}
 
-.nav-menu{
-	font-size: 18px;
-	margin: 0 10px;
-	line-height: 80px;
-	text-transform: uppercase;
-	width: max-content;
-	}
+			.nav-menu{
+				font-size: 18px;
+				margin: 0 10px;
+				line-height: 80px;
+				text-transform: uppercase;
+				width: max-content;
+			}
 
-/*Palabra Control*/
-	.nav-menu-item{
-	padding: 8px 8px;
-	border-radius: 3px;
-	color: white;
-	text-decoration: none;
-	}
-/*Sombreado de Control*/
-	.nav-menu-item:hover{
-	background-color: #006400;
-	transition: 0.5s;
-	}
-		
-	.main{		
-	padding-top: 40px;
-	}
+			/*Palabra Control*/
+			.nav-menu-item{
+				padding: 8px 8px;
+				border-radius: 3px;
+				color: white;
+				text-decoration: none;
+			}
+			/*Sombreado de Control*/
+			.nav-menu-item:hover{
+				background-color: #006400;
+				transition: 0.5s;
+			}
+					
+			.main{		
+				padding-top: 40px;
+			}
 
-	.contenido{
-	display: grid;
-	grid-template-columns: 50% 50%;
-	gap: 1em;	
-	}
+			.contenido{
+				display: grid;
+				grid-template-columns: 50% 50%;
+				gap: 1em;
+					
+			}
 
-	.contenido div{
-	background-color: gray;
-	padding: 1em;
-	}
+			.contenido div{
+				background-color: #BFBFBF;
+				padding: 1em;
+			}
 
-	.contenido textarea{
-	width: 100%;
-	height: 100%;
-	}
+			.contenido textarea{
+				width: 100%;
+				height: 100%;
+			}
 
-	.h1{
-	text-align: center;
-	font-size: 20px;
-	font-weight: bold;
-	line-height: 80px;
-	color: white;
-	text-decoration: none;
-	}
+			.h1{
+				text-align: center;
+				font-size: 20px;
+				font-weight: bold;
+				line-height: 80px;
+				color: white;
+				text-decoration: none;
+			}
 
-	.h2{
-	text-align: center;
-	font-size: 20px;
-	font-weight: bold;
-	line-height: 80px;
-	color: white;
-	text-decoration: none;
-	}
+			.h2{
+				text-align: center;
+				font-size: 20px;
+				font-weight: bold;
+				line-height: 80px;
+				color: white;
+				text-decoration: none;
+			}
 
-	.boton{
-	font-size: 15px;
-	text-align: center;
-	padding: 10px 10px;
-	width: 70px;				
-	border: 1px solid;
-	border-radius: 12px;
-	transition-duration: 0.3s;
-	}
-	
-	.boton:hover{
-	background-color: #7C7E7C;
-	}	
+			.boton{
+				font-size: 15px;
+				text-align: center;
+				padding: 10px 10px;
+				width: 70px;				
+				border: 1px solid;
+				border-radius: 12px;
+				transition-duration: 0.3s;
+					
+			}
+			.boton:hover{
+				background-color: #7C7E7C;
+			}	
 
-	.slide-control{
-	width: 100%;
-	}
+			.slide-control{
+				width: 100%;
 
-	.slider{
-	width: 100%;
-	border-radius: 12px;
-	}
+			}
+			.slider{
+				width: 100%;
+				border-radius: 12px;
+			}
+			.slider: hover{
+				opacity: 1;
+			}
+						
+			.p{
+				font-size: 20px;
+				font-weight: bold;
+				margin-top: 50px;
+				opacity: 0.7;
+				color: white;
+			}
 
-	.slider: hover{
-	opacity: 1;
-	}
-			
-	.p{
-	font-size: 20px;
-	font-weight: bold;
-	margin-top: 50px;
-	opacity: 0.7;
-	color: white;
-	}
+			.cicloIN{
+				height: 30%;
+				width: 30%;
+			}
 
-	.cicloIN{
-	height: 30%;
-	width: 30%;
-	}
+			.irrigacion{
+				min-width: 25%;
+			}
+			.irrigacion img{
+				height: 40%;
+				width: 40%;
+				display: block;
+				margin: 0 auto;
+				border-radius: 12px;
+			}
 
-	.irrigacion{
-	min-width: 25%;
-	}
-	
-	.irrigacion img{
-	height: 40%;
-	width: 40%;
-	display: block;
-	margin: 0 auto;
-	border-radius: 12px;
-	}
+			.temperatura{
+				min-width: 50%;
+			}
+			.temperatura img{
+				height: 40%;
+				width: 40%;
+				display: block;
+				margin: 0 auto;
+				border-radius: 12px;
+			}
 
-	.temperatura{
-	min-width: 50%;
-	}
+			.radiador{
+				min-width: 50%;
+			}
+			.radiador img{
+				height: 40%;
+				width: 40%;
+				display: block;
+				margin: 0 auto;
+				border-radius: 12px;
+			}
 
-	.temperatura img{
-	height: 40%;
-	width: 40%;
-	display: block;
-	margin: 0 auto;
-	border-radius: 12px;
-	}
+			.ventilador{
+				min-width: 50%;
+			}
+			.ventilador img{
+				height: 40%;
+				width: 40%;
+				display: block;
+				margin: 0 auto;
+				border-radius: 12px;
+			}
 
-	.radiador{
-	min-width: 50%;
-	}	
-
-	.radiador img{
-	height: 40%;
-	width: 40%;
-	display: block;
-	margin: 0 auto;
-	border-radius: 12px;
-	}
-
-	.ventilador{
-	min-width: 50%;
-	}
-
-	.ventilador img{
-	height: 40%;
-	width: 40%;
-	display: block;
-	margin: 0 auto;
-	border-radius: 12px;
-	}
-</style>
+		</style>
 
 	</head>
 	<body>
@@ -235,7 +231,7 @@
     			<div class="slide-control">
                    	<input type="range" min="0" max="100" value="0" id="temp_input" class="slider">
                    	<center>
-                   		<p class="p">Valor: <span id="value_temp"></span>&deg;C</p>
+                   		<p class="p">Valor: <span id="value_temp"></span> &deg;C</p>
                    		<button id="botonTemp" class="boton botonTempe" onclick="enviaDatos('TEMP',document.getElementById('temp_input').value,'TEMPERATURA')">OK</button>
                    	</center>
                    	
@@ -291,11 +287,35 @@
     		</div>
 
     		<div>
-    			<h1 class="h1">Gr&aacute;fica Irrigaci&oacute;n</h1>
+    			<h1 class="h1">Gr&aacute;fica Irrigacion</h1>
     			<center>
     				<canvas id="grafica_irrigacion"></canvas>
     			</center>
     			
+    		</div>
+
+    		<div>
+    			<h1 class="h1">Gr&aacute;fica Temperatura</h1>
+    			<center>
+    				<canvas id="grafica_temperatura"></canvas>
+    			</center>
+    			
+    		</div>
+
+    		<div>
+    			<h1 class="h1">Gr&aacute;fica Radiador</h1>
+    			<center>
+    				<canvas id="grafica_radiador"></canvas>
+    			</center>
+   
+    		</div>
+
+    		<div>
+    			<h1 class="h1">Gr&aacute;fica Ventilador</h1>
+    			<center>
+    				<canvas id="grafica_ventilador"></canvas>
+    			</center>
+   
     		</div>
 
     		
@@ -307,8 +327,7 @@
 
 <script language="javascript">
 	<!--
-	//
-	var apagarIrrTem = new Boolean(true);
+		var apagarIrrTem = new Boolean(false);
 
 	//Boton Irrigacion-------------------------------------------------------------
 	
@@ -477,17 +496,15 @@
 		var elem = document.getElementById("reloj");
 		var timerId = setInterval(countdown, 1000);
 		var seg = 59;
-		
 
 		function countdown() {	
 	  		if (timeLeft == 0) {
 			    elem.innerHTML = 'Finalizado';
 			    while(apagarIrrTem){
-			    	document.getElementById('historialArea').innerHTML += 'Apagando irrigaci\u00F3n...'+'\n';
+			    	apagarIrrTem = false ;
+			    	document.getElementById('historialArea').innerHTML += 'CICLO: Apagando irrigaci\u00F3n...'+'\n';
 					enviaDatos('ONOFFIrrig','OFF','IRRIGACION');
 					enviaDatos('TEMP',document.getElementById('temp_input').value,'TEMPERATURA');
-					apagarIrrTem = false ;
-					//break;
 			    }
 				
 	  		} else {
@@ -501,62 +518,205 @@
 	    		}
 			}
 		}
-			document.getElementById('historialArea').innerHTML += 'Irrigaci\u00F3n encendida...'+'\n';
+			document.getElementById('historialArea').innerHTML += 'CICLO: Irrigaci\u00F3n encendida...'+'\n';
 			enviaDatos('ONOFFIrrig','ON','IRRIGACION');
 			enviaDatos('TEMP',document.getElementById('temp_input').value,'TEMPERATURA');
 			
 	}
-
-	
 	//Funcion para el historial---------------------------------------------------
 	function enviaHistorial(valor, funcion){
 		document.getElementById('historialArea').innerHTML+= '\n' + funcion +'&nbsp'+valor+'\n';
+
 	
 	}
 	//Funcion para obtener datos--------------------------------------------------
 	function enviaDatos(evento, valor, funcion){
-		enviaHistorial(valor, funcion);//Envia los datos al historial escrito de la pagina
-		if(funcion != 'TEMPERATURA'){
-			submit(funcion,valor);//Se envia lo que se debe activar (radiador, ventilador, irrigacion)
-		} else {
-			checaTemp(funcion, valor);//Checa la temperatura para saber qué prender
-		}
+		enviaHistorial(valor, funcion);
 
 		if(funcion == 'IRRIGACION'){
-			if(valor == 'ON'){ //Grafica irrigacion
+			if(valor == 'ON' || valor == 'OFF'){
+				submit(funcion,valor);
 				GraficaIrri(valor);
 			}
+		}
 
+		if(funcion == 'TEMPERATURA'){
+			submit(funcion,valor);
+			checaTemp(funcion, valor);
+			GraficaTemp(valor);
+		}
+
+		if(funcion == 'RADIADOR'){
+			submit(funcion,valor);
+			GraficaRad(valor);
+		}
+
+		if(funcion == 'VENTILADOR'){
+			submit(funcion,valor);
+			GraficaVent(valor);
 		}
 		
 	}
 
-	//Grafica Irrgacion-------------------------------------------------------------
-	etiquetasIrrigacion = ["Inicial"]
-	datosIrrigacion  = [0]
+	//Grafica Irrigacion-------------------------------------------------------------
+	
+	etiquetasIrri = ["0"]
+	datosIrri  = [0]
+	var etiqueta = 0;
 	
 	function GraficaIrri(valor){
 		const $grafica_irrigacion = document.querySelector("#grafica_irrigacion");
 		if (valor == 'ON'){
-			datosIrrigacion.push(100);
+			datosIrri.push(100);
+			etiqueta = etiqueta +1;
 		}
 		else{
-			datosIrrigacion.push(0);
+			datosIrri.push(0);
+			etiqueta = etiqueta +1;
 		}
+		etiquetasIrri.push(etiqueta)
 
 		const DATOSIrrigacion = {
 			label: "Irrigacion ",
-			data: datosIrrigacion,
-			backgroundColor:'rgba(54, 162, 235, 0.2)', //Color de fondo
-			borderColor: 'rgba(54, 162, 235, 1)', //Color borde
+			data: datosIrri,
+			backgroundColor:'rgba(4, 120, 6, 0.5)', //Color de fondo
+			borderColor: 'rgba(4, 120, 6, 0.5)', //Color borde
 			borderWidth: 1, //Ancho del borde
 		};
 		new Chart($grafica_irrigacion, {
 			type: 'bar', //Tipo de grafica
 			data: {
-				labels: etiquetasIrrigacion,
+				labels: etiquetasIrri,
 				datasets: [
 					DATOSIrrigacion,
+
+				]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+						
+						}
+					}],
+				},
+			}
+		});
+	}
+	
+
+	//Grafica Temperatura-------------------------------------------------------------
+	etiquetasTemp = ["0"]
+	datosTemp  = [0]
+	var etiqueta2 = 0;
+	function GraficaTemp(valor){
+		const $grafica_temperatura = document.querySelector("#grafica_temperatura");
+		if (valor => 0){
+			datosTemp.push(valor);
+			etiqueta2 = etiqueta2 +1;
+		}
+		etiquetasTemp.push(etiqueta2)
+
+		const DATOSTemperatura = {
+			label: "Temperatura ",
+			data: datosTemp,
+			backgroundColor:'rgba(4, 120, 6, 1)', //Color de fondo
+			borderColor: 'rgba(4, 120, 6, 1)', //Color borde
+			borderWidth: 1, //Ancho del borde
+		};
+		new Chart($grafica_temperatura, {
+			type: 'line', //Tipo de grafica
+			data: {
+				labels: etiquetasTemp,
+				datasets: [
+					DATOSTemperatura,
+
+				]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+						
+						}
+					}],
+				},
+			}
+		});
+	}
+
+
+	//Grafica Radiador-------------------------------------------------------------
+	
+	etiquetasRad = ["0"]
+	datosRad  = [0]
+	var etiqueta3 = 0;
+	function GraficaRad(valor){
+		const $grafica_radiador = document.querySelector("#grafica_radiador");
+		if (valor => 0){
+			datosRad.push(valor);
+			etiqueta3 = etiqueta3 +1;
+		}
+		etiquetasRad.push(etiqueta3)
+
+		const DATOSRadiador = {
+			label: "Radiador ",
+			data: datosRad,
+			backgroundColor:'rgba(4, 120, 6, 1)', //Color de fondo
+			borderColor: 'rgba(4, 120, 6, 1)', //Color borde
+			borderWidth: 1, //Ancho del borde
+		};
+		new Chart($grafica_radiador, {
+			type: 'line', //Tipo de grafica
+			data: {
+				labels: etiquetasRad,
+				datasets: [
+					DATOSRadiador,
+
+				]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+						
+						}
+					}],
+				},
+			}
+		});
+	}
+
+
+	//Grafica Ventilador-------------------------------------------------------------
+	
+	etiquetasVent = ["0"]
+	datosVent  = [0]
+	var etiqueta4 = 0;
+	function GraficaVent(valor){
+		const $grafica_ventilador = document.querySelector("#grafica_ventilador");
+		if (valor => 0){
+			datosVent.push(valor);
+			etiqueta4 = etiqueta4 +1;
+		}
+		etiquetasVent.push(etiqueta4)
+
+		const DATOSVentilador = {
+			label: "Ventilador ",
+			data: datosVent,
+			backgroundColor:'rgba(4, 120, 6, 1)', //Color de fondo
+			borderColor: 'rgba(4, 120, 6, 1)', //Color borde
+			borderWidth: 1, //Ancho del borde
+		};
+		new Chart($grafica_ventilador, {
+			type: 'line', //Tipo de grafica
+			data: {
+				labels: etiquetasVent,
+				datasets: [
+					DATOSVentilador,
 
 				]
 			},
@@ -592,6 +752,7 @@
 		submit(action, value);
 	}
 
+
 	function checaTemp(funcion, valor){
 		//Funcion para activar el radiador o el ventilador según la temperatura
 		if(funcion == 'TEMPERATURA'){
@@ -611,7 +772,7 @@
 				submit('VENTILADOR','25');
 				enviaHistorial('25','VENTILADOR');
 			} else {
-				enviaHistorial(valor,funcion);
+				//enviaHistorial(valor,funcion);
 				submit(funcion, valor);
 			}
 		}
