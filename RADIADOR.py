@@ -13,6 +13,12 @@
 import smbus2
 import struct
 import time
+import RPi.GPIO as GPIO
+
+# Set up Rpi.GPIO library to use physical pin numbers
+GPIO.setmode(GPIO.BOARD)
+# Configurando los pins de salida como bajos por defecto
+GPIO.setup(16, GPIO.OUT, initial=GPIO.LOW) #Ventilador por pwm
 
 # Arduino's I2C device address
 SLAVE_ADDR = 0x0A # I2C Address of Arduino
@@ -45,4 +51,5 @@ def RADIADOR(potencia):
 	pw = factorPotencia(pot)
 	escribePotencia(pw)
 	print("La potencia del radiador es de: ",pot)
+	GPIO.output(10, GPIO.LOW)
 	
