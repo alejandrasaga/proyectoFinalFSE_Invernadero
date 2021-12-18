@@ -1,15 +1,15 @@
-# proyectoFinalFSE_Invernadero
+# Proyecto Final Invernadero
 Proyecto de un invernadero para la materia de Fundamentos de Sistemas Embebidos
 
 Universidad Nacional Autónoma de México 
 Facultad de Ingeniería 
 
-Autores:
+**Autores:**
 
-  -Marin Jimenez Irving
-  -Salas García Alejandra
+  * Marin Jimenez Irving
+  * Salas García Alejandra
  
-Profesor:
+**Profesor:**
 
     M.C. José Mauricio Matamoros de María y Campos
     
