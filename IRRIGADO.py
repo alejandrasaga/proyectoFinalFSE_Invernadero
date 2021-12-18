@@ -5,7 +5,9 @@
 # IRRIGADO.py
 #
 #___________________________________________________
-# Author: Salas Garcia Alejandra
+# Authors: 
+#           Marín Jiménez Irving
+#           Salas Garcia Alejandra
 #___________________________________________________
 # License: MIT
 #

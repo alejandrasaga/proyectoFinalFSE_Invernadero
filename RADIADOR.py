@@ -4,7 +4,9 @@
 #
 # RADIADOR.py
 #___________________________________________________
-# Author: Salas Garcia Alejandra
+# Author: 
+#           Marín Jiménez Irving
+#           Salas Garcia Alejandra
 #___________________________________________________
 # License: MIT
 #
